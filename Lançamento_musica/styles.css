@@ -1,0 +1,443 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000000;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para o efeito de desfoque */
+    backdrop-filter: blur(10px); /* Aplica o desfoque ao fundo */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+   
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.logo h1{
+  font-family:'Copperplate',fantasy ;
+  width: 2%;
+    
+}
+
+
+
+
+.nome-canal {
+
+	font-family:'Copperplate', fantasy;
+	font-size: 38px;
+	color: #fff;
+	text-shadow: #000 0.1em 0.1em 0.2em
+}
+
+
+
+@media (max-width: 780px) {
+	.nome-canal {
+	
+		font-size: 20px;
+	}
+	
+	.logo-canal {
+		bottom: 30%;
+	}
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: -90px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    min-height: 100vh; /* Ocupa a altura da tela inteira */
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 0; /* Remove margens verticais */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove sombra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para o efeito de desfoque */
+    backdrop-filter: blur(10px); /* Aplica o desfoque ao fundo */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Adiciona uma borda */
+    
+}
+
+.flip-card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    border-radius: .1em;
+  }
+
+  .top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: .75em;
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+}
+
+.flip-card .top-flip {
+    position: absolute;
+    width: 100%;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+  }
+
+
+  @keyframes flip-top {
+    100% {
+      transform: rotateX(90deg);
+    }
+  }
+
+  .flip-card .bottom-flip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: flip-bottom 250ms ease-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+
+  @keyframes flip-bottom {
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+
+ .nome-canal h2{
+    font-family: monospace;
+    border-right:1px solid;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: break-word; /* Garante a quebra de palavras longas */
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 5s steps(39) infinite,
+    blinking 0.5s infinite step-end alternate;
+  }
+
+  @keyframes typing {
+    0% {
+      width: 0; /* Começa sem texto */
+  }
+  70% {
+      width: 100%; /* Conclui a digitação */
+  }
+
+  90% {
+    width: 39ch; /* Mantém o texto visível por um tempo */
+}
+  100% {
+      width: 0; /* Volta ao estado inicial */
+  }
+  
+  }
+
+  @keyframes blinking {
+    50%{
+      border-color: transparent;
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .container-segment {
+   
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    align-items: center;
+  }
+
+  .container-segment {
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+    align-items: center;
+  }
+
+  .segment {
+    display: flex;
+    gap: .1em;
+  }
+
+  .segment-title {
+    font-size: 55%;
+    font-family:'Copperplate', fantasy ;
+
+  }
+
+
+
+#artistas {
+    border-color: #f9f9f9;
+    background-image: url('WhatsApp\ Image\ 2024-08-15\ at\ 11.05.24.jpeg');
+    font-size: 4.25rem;
+    color: #de4848;
+
+}
+#produtores {
+    background-image: url('WhatsApp\ Image\ 2024-08-15\ at\ 11.05.24.jpeg');
+}
+#lançamentos {
+    background-image: url('WhatsApp\ Image\ 2024-08-15\ at\ 11.05.24.jpeg');
+}
+#staffs {
+    background-image: url('WhatsApp\ Image\ 2024-08-15\ at\ 11.05.24.jpeg');
+}
+#sobre {
+    background-image: url('WhatsApp\ Image\ 2024-08-15\ at\ 11.05.24.jpeg');
+}
+#contato {
+    background-image: url('WhatsApp\ Image\ 2024-08-15\ at\ 11.05.24.jpeg');
+}
+
+.artista img {
+    width: 100%;
+    border-radius: 50%; /* Torna as imagens redondas */
+    border: 5px solid rgba(255, 255, 255, 0.8); /* Adiciona uma borda branca às imagens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra para destacar as imagens */
+}
+
+
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.artistas-container, .lançamentos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.artista, .lançamento {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.artista img, .lançamento img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.artista:hover, .lançamento:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+@keyframes circularMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+    75% {
+        transform: translate(-10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.logo img {
+    width: 300px;
+    margin-right: 0px;
+    margin-top: 10px;
+    animation: circularMove 3s infinite ease-in-out; /* Aplica a animação circular */
+}
+
+.logo h1{
+  font-family:'Copperplate', fantasy ;
+  width: 300px;
+    
+}
+
+/* Regras de responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    .container-segment {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    form input, form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        padding: 8px 15px;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+    }
+}
+
